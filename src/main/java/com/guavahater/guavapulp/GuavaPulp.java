@@ -24,7 +24,7 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 public class GuavaPulp
 {
     // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "projectunbound";
+    public static final String MOD_ID = "guavapulp";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
@@ -36,7 +36,7 @@ public class GuavaPulp
         modEventBus.addListener(this::commonSetup);
 
         // Register ourselves for server and other game events we are interested in.
-        // Note that this is necessary if and only if we want *this* class (ProjectUnbound) to respond directly to events.
+        // Note that this is necessary if and only if we want *this* class (GuavaPulp) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
