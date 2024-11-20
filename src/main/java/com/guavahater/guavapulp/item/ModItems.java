@@ -14,6 +14,9 @@ public class ModItems
     public static final DeferredItem<Item> INCENSE = ITEMS.register
             ("incense", () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> SMALL_LEAF = ITEMS.register
+            ("small_leaf", () -> new Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus)
     {
         ITEMS.register(eventBus);
