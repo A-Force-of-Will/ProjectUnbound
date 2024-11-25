@@ -1,4 +1,7 @@
 {
   "item.guavapulp.incense": "Incense Stick",
-  "item.guavapulp.small_leaf": "Small Leaf"
+  "item.guavapulp.small_leaf": "Small Leaf",
+
+  "block.guavapulp.glass_bowl": "Glass Bowl",
+  "block.guavapulp.sandalwood_log": "Sandalwood Log"
 }

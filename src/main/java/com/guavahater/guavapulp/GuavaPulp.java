@@ -72,6 +72,10 @@ public class GuavaPulp
         {
             event.accept(ModBlocks.GLASS_BOWL);
         }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+        {
+            event.accept(ModBlocks.SANDALWOOD_LOG);
+        }
 
     }
 

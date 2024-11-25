@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "guavapaste:block/glass_bowl"
+      "model": "guavapulp:block/glass_bowl"
     }
   }
 }

@@ -7,6 +7,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -19,7 +20,13 @@ public class ModBlocks
     //Glass bowl block addition to the registry!
     public static final DeferredBlock<Block> GLASS_BOWL = registerBlock("glass_bowl", () -> new Block(BlockBehaviour.Properties.of()
             .sound(SoundType.GLASS)
-            .strength(1f, .1f)));
+            .strength(1f)));
+    public static final DeferredBlock<Block> SANDALWOOD_LOG = registerBlock("sandalwood_log", () -> new Block(BlockBehaviour.Properties.of()
+            .instrument(NoteBlockInstrument.BASS)
+            .strength(2.0F)
+            .sound(SoundType.WOOD)
+            .ignitedByLava()
+    ));
 
     private static <T extends  Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block)
     {
