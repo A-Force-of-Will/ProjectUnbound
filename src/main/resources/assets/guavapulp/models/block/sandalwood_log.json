@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:block/cube",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "guavapulp:block/sandalwood_log"
+    "end": "guavapulp:block/sandalwood_log_top",
+    "side": "guavapulp:block/sandalwood_log_side"
   }
 }

@@ -4,8 +4,7 @@ import com.guavahater.guavapulp.GuavaPulp;
 import com.guavahater.guavapulp.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.neoforged.bus.api.IEventBus;
@@ -18,10 +17,16 @@ public class ModBlocks
 {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(GuavaPulp.MOD_ID);
     //Glass bowl block addition to the registry!
-    public static final DeferredBlock<Block> GLASS_BOWL = registerBlock("glass_bowl", () -> new Block(BlockBehaviour.Properties.of()
+    public static final DeferredBlock<TransparentBlock> GLASS_BOWL = registerBlock("glass_bowl", () -> new TransparentBlock(BlockBehaviour.Properties.of()
+            .strength(0.3F)
             .sound(SoundType.GLASS)
-            .strength(1f)));
-    public static final DeferredBlock<Block> SANDALWOOD_LOG = registerBlock("sandalwood_log", () -> new Block(BlockBehaviour.Properties.of()
+            .noOcclusion()
+            .isValidSpawn((state, level, pos, value) -> false)
+            .isRedstoneConductor((state, level, pos) -> false)
+            .isSuffocating((state, level, pos) -> false)
+            .isViewBlocking((state, level, pos) -> false)));
+
+    public static final DeferredBlock<RotatedPillarBlock> SANDALWOOD_LOG = registerBlock("sandalwood_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
             .instrument(NoteBlockInstrument.BASS)
             .strength(2.0F)
             .sound(SoundType.WOOD)
