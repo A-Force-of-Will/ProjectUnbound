@@ -3,5 +3,8 @@
   "item.guavapulp.small_leaf": "Small Leaf",
 
   "block.guavapulp.glass_bowl": "Glass Bowl",
-  "block.guavapulp.sandalwood_log": "Sandalwood Log"
+  "block.guavapulp.sandalwood_log": "Sandalwood Log",
+
+  "creativetab.guavapulp.guavapulp_items": "[GP] Items",
+  "creativetab.guavapulp.guavapulp_blocks": "[GP] Blocks"
 }
