@@ -1,0 +1,22 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "guavapulp:block/incense",
+		"particle": "guavapulp:block/incense"
+	},
+	"elements": [
+		{
+			"from": [7.5, 0, 7.5],
+			"to": [8.5, 8, 8.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [1, 1, 2, 9], "texture": "#0"},
+				"east": {"uv": [0, 1, 1, 9], "texture": "#0"},
+				"south": {"uv": [3, 1, 4, 9], "texture": "#0"},
+				"west": {"uv": [2, 1, 3, 9], "texture": "#0"},
+				"up": {"uv": [2, 1, 1, 0], "texture": "#0"},
+				"down": {"uv": [3, 0, 2, 1], "texture": "#0"}
+			}
+		}
+	]
+}

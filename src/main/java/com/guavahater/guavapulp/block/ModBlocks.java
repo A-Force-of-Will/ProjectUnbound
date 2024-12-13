@@ -2,11 +2,13 @@ package com.guavahater.guavapulp.block;
 
 import com.guavahater.guavapulp.GuavaPulp;
 import com.guavahater.guavapulp.item.ModItems;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -26,11 +28,19 @@ public class ModBlocks
             .isSuffocating((state, level, pos) -> false)
             .isViewBlocking((state, level, pos) -> false)));
 
+    //Sandalwood block addition to the registry!
     public static final DeferredBlock<RotatedPillarBlock> SANDALWOOD_LOG = registerBlock("sandalwood_log", () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
             .instrument(NoteBlockInstrument.BASS)
             .strength(2.0F)
             .sound(SoundType.WOOD)
             .ignitedByLava()
+    ));
+    //Adding the incense block to the registry
+    public static final DeferredBlock<Block> INCENSE = registerBlock("incense", () -> new Block(BlockBehaviour.Properties.of()
+            .noCollission()
+            .instabreak()
+            .sound(SoundType.WOOD)
+            .pushReaction(PushReaction.DESTROY)
     ));
 
     private static <T extends  Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block)

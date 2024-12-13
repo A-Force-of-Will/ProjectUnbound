@@ -21,7 +21,6 @@ public class ModCreativeModeTabs {
             .title(Component.translatable("creativetab.guavapulp.guavapulp_items"))
             .displayItems((itemDisplayparameters, output) -> {
                 output.accept(ModItems.SMALL_LEAF);
-                output.accept(ModItems.INCENSE);
             }).build());
 
     //BLOCKS
@@ -32,6 +31,7 @@ public class ModCreativeModeTabs {
             .displayItems((itemDisplayparameters, output) -> {
                 output.accept(ModBlocks.GLASS_BOWL);
                 output.accept(ModBlocks.SANDALWOOD_LOG);
+                output.accept(ModBlocks.INCENSE);
             }).build());
 
     public static void register(IEventBus eventBus) {

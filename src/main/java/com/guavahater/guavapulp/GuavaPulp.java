@@ -64,7 +64,7 @@ public class GuavaPulp
 
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES)
         {
-            event.accept(ModItems.INCENSE);
+            event.accept(ModBlocks.INCENSE);
 
         }
         if (event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS)
